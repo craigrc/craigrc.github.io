@@ -14,7 +14,25 @@
             function sectionOut(section) {
                 section.getElementsByClassName("fill")[0].style.opacity = "1"; 
                 section.getElementsByClassName("iconDev")[0].style.opacity = "0";
-            } 
+            }
+            function code_unlink() {
+                document.getElementById("code_image").style.opacity = "1";
+            }
+            function code_link() {
+                document.getElementById("code_image").style.opacity = "0.5";
+            }
+            function websites_unlink() {
+                document.getElementById("websites_image").style.opacity = "1";
+            }
+            function websites_link() {
+                document.getElementById("websites_image").style.opacity = "0.5";
+            }
+            function circuits_unlink() {
+                document.getElementById("circuits_image").style.opacity = "1";
+            }
+            function circuits_link() {
+                document.getElementById("circuits_image").style.opacity = "0.5";
+            }
         </script>
     </head>
     <body>
@@ -41,11 +59,25 @@
                 </button>
             </nav>
         </div>
-        <div id="main">
             <div id="sectionLink">
-            
+                <div class="code">
+                    <div class="images">
+                        <a href="#codeDesign"><img src="./media/code-icon.png" alt="code icon" width="100%" id="code_image" onmouseover="code_link()" onmouseout="code_unlink()"></a>
+                    </div>
+                </div>
+                <div class="websites">
+                    <div class="images">
+                        <a href="#webDesign"><img src="./media/website-icon.png" alt="website icon" width="100%" id="websites_image" onmouseover="websites_link()" onmouseout="websites_unlink()"></a>
+                    </div>
+                </div>
+                <div class="circuits">
+                    <div class="images">
+                        <a href="#circuitryDesign"><img src="./media/circuit-icon.png" alt="circuitry icon" width="100%" id="circuits_image" onmouseover="circuits_link()" onmouseout="circuits_unlink()"></a>
+                    </div>
+                </div>
             </div>
-            <a href="./websites">
+        <div id="main">
+            <a href="./">
                 <div class="devSection" id="webDesign" onmouseover=sectionHover(this) onmouseout=sectionOut(this)>
                     <img class="fill" src="./media/web.jpg">
                     <img class="iconDev" src="./media/website-icon.png">
@@ -53,19 +85,19 @@
                     <h2 class="devTitle">Web Design</h2>
                 </div>
             </a>
-            <a href="./code">
+            <a>
                 <div class="devSection" id="codeDesign" onmouseover=sectionHover(this) onmouseout=sectionOut(this)>
                     <img class="fill" src="./media/code.jpg">
                     <img class="iconDev" src="./media/code-icon.png">
-                    <h2 class="description">A collection of programming projects, including a library of code</h2>
+                    <h2 class="description">Software Development</h2>
                     <h2 class="devTitle">Software Development</h2>
                 </div>  
             </a>
-            <a href="./circuits">
+            <a>
                 <div class="devSection" id="circuitryDesign" onmouseover=sectionHover(this) onmouseout=sectionOut(this)>
                     <img class="fill" src="./media/circuit.jpg">
                     <img class="iconDev" src="./media/circuit-icon.png">
-                    <h2 class="description">A collection of circuitry projects</h2>
+                    <h2 class="description">Circuitry Projects</h2>
                     <h2 class="devTitle">Circuitry Projects</h2>
                 </div> 
             </a>
