@@ -8,12 +8,10 @@
         <script type="text/javascript">
             function sectionHover(section) {
                 section.getElementsByClassName("fill")[0].style.opacity = "0.4"; 
-                section.getElementsByClassName("iconDev")[0].style.opacity = "1";
             }
 
             function sectionOut(section) {
-                section.getElementsByClassName("fill")[0].style.opacity = "1"; 
-                section.getElementsByClassName("iconDev")[0].style.opacity = "0";
+                section.getElementsByClassName("fill")[0].style.opacity = "0.6"; 
             } 
         </script>
     </head>
@@ -46,34 +44,16 @@
             <div id="sectionLink">
             
             </div>
-            <a href="./websites">
-                <div class="devSection" id="webDesign" onmouseover=sectionHover(this) onmouseout=sectionOut(this)>
-                    <img class="fill" src="./media/web.jpg">
-                    <img class="iconDev" src="./media/website-icon.png">
-                    <h2 class="description">A library of websites and pages I have developed</h2>
-                    <h2 class="devTitle">Web Design</h2>
-                </div>
-            </a>
-            <a href="./code">
-                <div class="devSection" id="codeDesign" onmouseover=sectionHover(this) onmouseout=sectionOut(this)>
-                    <img class="fill" src="./media/code.jpg">
-                    <img class="iconDev" src="./media/code-icon.png">
-                    <h2 class="description">A collection of programming projects, including a library of code</h2>
-                    <h2 class="devTitle">Software Development</h2>
-                </div>  
-            </a>
-            <a href="./circuits">
-                <div class="devSection" id="circuitryDesign" onmouseover=sectionHover(this) onmouseout=sectionOut(this)>
-                    <img class="fill" src="./media/circuit.jpg">
-                    <img class="iconDev" src="./media/circuit-icon.png">
-                    <h2 class="description">A collection of circuitry projects</h2>
-                    <h2 class="devTitle">Circuitry Projects</h2>
-                </div> 
-            </a>
+            <div class="devSection" id="webDesign" onmouseover=sectionHover(this) onmouseout=sectionOut(this)>
+                <img class="fill" src="./media/poly1.jpg">
+                <img class="leftImage" src="./media/religion.png">
+                <h2 class="description">My Higher Enrichment web project on religious and non-religious views on gender identity throughout history and internationally.</h2>
+                <h2 class="devTitle">Web Design</h2>
+            </div>
         </div>
         <footer>
             <p class="footerText">craigrc.tk | cameron craig | 2020<p>
-            <p class="footerText"><a href="./about/">contact me</a></p>
+            <p class="footerText"><a href="../about/">contact me</a></p>
         </footer>
         <script type="text/javascript">           
             window.onscroll = function() {myFunction()};
