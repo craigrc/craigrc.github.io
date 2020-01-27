@@ -325,7 +325,7 @@ nav .navbar-toggler.hamburger .bottom-bar {
     -moz-transition: opacity 0.5s linear;
     -o-transition: opacity 0.5s linear;
     transition: opacity 0.5s linear;
-    opacity: 0.6;
+    opacity: 0.4;
 }
 .description {
     position: absolute;
@@ -335,7 +335,7 @@ nav .navbar-toggler.hamburger .bottom-bar {
     font-family: 'Roboto Mono', monospace;
     font-size: 0.9em;
     width:50%;
-    float: right;
+    text-align: right;
 }
 .devTitle {
     position: absolute;
@@ -371,4 +371,17 @@ footer {
     height: 100%;
     margin: 0;
     padding: 0;
+}
+.linkImage {
+    position: absolute;
+    left: 110px;
+    bottom: 70px;
+    width: 200px;
+    margin: 0;
+    padding: 0; 
+    opacity: 0;
+    -webkit-transition: opacity 0.5s linear;
+    -moz-transition: opacity 0.5s linear;
+    -o-transition: opacity 0.5s linear;
+    transition: opacity 0.5s linear;
 }

@@ -7,11 +7,11 @@
         <link rel="stylesheet" href="./css/mycss.css">
         <script type="text/javascript">
             function sectionHover(section) {
-                section.getElementsByClassName("fill")[0].style.opacity = "0.4"; 
+                section.parentElement.getElementsByClassName("linkImage")[0].style.opacity = "1";
             }
 
             function sectionOut(section) {
-                section.getElementsByClassName("fill")[0].style.opacity = "0.6"; 
+                section.parentElement.getElementsByClassName("linkImage")[0].style.opacity = "0";
             } 
         </script>
     </head>
@@ -41,12 +41,10 @@
             </nav>
         </div>
         <div id="main">
-            <div id="sectionLink">
-            
-            </div>
-            <div class="devSection" id="webDesign" onmouseover=sectionHover(this) onmouseout=sectionOut(this)>
+            <div class="devSection">
                 <img class="fill" src="./media/poly1.jpg">
-                <img class="leftImage" src="./media/religion.PNG">
+                <img class="leftImage" src="./media/religion.PNG" onmouseover=sectionHover(this) onmouseout=sectionOut(this)>
+                <a href="http://www.religionandidentity.gq"><img class="linkImage" src="./media/linkImage.png"></a>
                 <h2 class="description">My Higher Enrichment web project on religious and non-religious views on gender identity throughout history and internationally.</h2>
                 <h2 class="devTitle">Web Design</h2>
             </div>
