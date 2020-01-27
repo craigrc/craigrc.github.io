@@ -15,7 +15,7 @@
                 section.getElementsByClassName("linkImage")[0].style.opacity = "0";
             } 
         </script>
-        <title>Website Generator</title>
+        <title>Sentiment Analysis</title>
     </head>
     <body>
         <div id="header">
@@ -23,17 +23,17 @@
                 <div id="slideshow">
                     <img src="./media/centerImage.jpg" class="fadeIn">
                 </div>
-                <h2 id="subtitleRight" class="mobile-hide">Code</h2>
+                <h2 id="subtitleRight" class="mobile-hide">Sentiment Analysis</h2>
                 <h2 id="subtitleLeft" class="mobile-hide">Cameron Craig</h2>
             </div>
             <nav class="mobileMenu static" id="myHeader">
                 <p id="navTitle">Cameron Craig - Code</p>
                 <div class="links">
-                    <a href="../index.html">Home</a>
-                    <a href="../websites/">Websites</a>
-                    <a href="../code/">Code</a>
-                    <a href="../circuits/">Circuitry</a>
-                    <a href="../about/">About Me</a>
+                    <a href="../../index.html">Home</a>
+                    <a href="../../websites/">Websites</a>
+                    <a href="../../code/">Code</a>
+                    <a href="../../circuits/">Circuitry</a>
+                    <a href="../../about/">About Me</a>
                 </div>
                 <button class="navbar-toggler hamburger" type="button" onclick="mobileNavToggle()">
                     <span class="icon-bar top-bar"></span>
@@ -43,33 +43,59 @@
             </nav>
         </div>
         <div id="main">
-            <h1 id="pageTitle">Automatic Website Maker</h1>
+            <h1 id="pageTitle">Sentiment Analysis of UN Security Council Resolutions</h1>
+            <br>
+            <div class="textbox">
+                <p>My sister was recently describing her thesis on the progression of womans rights as portrayed by advancements in UN Security Council Resolutions and so I decided to run a program to anylyse the average "happy-tone" of each piece and graphed these values against the year the piece was written. To provide context, she has illustrated this graph to describe what each turn means.</p>
+            </div>
+            <br>
+            <div class="imageSlogan">
+                <img src="./media/happiness.png" class="imageSloganImage">
+                <p class="imageSloganSlogan">Above is a graph produced from the resultant data.</p> 
+            </div>
+            <br>
             <section class="ArticleCopy">
                 <blockquote>
-                    <p>"This is an example of the styling of a key quote displayed on the page, a feature you can add as keyQuote"</p>
+                    <p>
+"
+
+#Initialise necessary libraries
+from pprint import pprint
+import nltk
+from nltk.sentiment.vader import SentimentIntensityAnalyzer as SIA
+sia = SIA()
+import os
+
+#Initiate necessary variables
+results = []
+
+#Open and evaluate each file within the resolutions folder
+for file in os.listdir(".\Resolutions"):
+    file_name =(os.path.join(".\Resolutions", file))
+    file = open(file_name)
+    contents = file.read()
+    pol_score = sia.polarity_scores(contents)
+    results.append(pol_score)
+    file.close()
+
+#Output the Sentiment Analysis Scores of each of the files   
+pprint(results[:100], width=100)
+
+"   
+- A snippet of the code performing the sentiment analysis.
+                    </p>
                 </blockquote>
             </section>
             <br>
             <div class="imageSlogan">
-                <img src="../media/centerImage.jpg" class="imageSloganImage">
-                <p class="imageSloganSlogan">An example of an image with a slogan</p> 
+                <img src="./media/notated.png" class="imageSloganImage">
+                <p class="imageSloganSlogan">Above is a notated copy of the graph by my sister which shows the events at each point in the graph.</p> 
             </div>
             <br>
-            <div class="textbox">
-                <p>This is an example of text that be can displayed on the page in a textbox.</p>
-            </div>
-            <br>
-            <div class="imageBox">
-                <img src="../media/centerImage.jpg" class="imageSloganImage">
-            </div>
-            <br>
-            <br>
-            <br>
-            <iframe height="400px" width="100%" src="https://repl.it/@craigc03/WebsiteMaker?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
         </div>
         <footer>
             <p class="footerText">craigrc.tk | cameron craig | 2020<p>
-            <p class="footerText"><a href="../about/">contact me</a></p>
+            <p class="footerText"><a href="../../about/">contact me</a></p>
         </footer>
         <script type="text/javascript">           
             window.onscroll = function() {myFunction()};
